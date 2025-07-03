@@ -1,20 +1,20 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="my-example-cli",
+    name="file-organizer-cli",
     version="0.1.0",
     packages=find_packages(),
     entry_points={
         'console_scripts': [
-            'my-cli=my_cli:main',
+            'file-organizer=file_organizer:main',
         ],
     },
-    author="Your Name",
-    author_email="your.email@example.com",
-    description="A simple example CLI.",
+    author="Your Name", # Ganti dengan nama Anda
+    author_email="your.email@example.com", # Ganti dengan email Anda
+    description="A CLI tool to organize and clean files.",
     long_description=open('README.md').read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/eidolon1302/cli-mad",
+    url="https://github.com/eidolon1302/cli-mad", # Pastikan ini URL repo Anda
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
