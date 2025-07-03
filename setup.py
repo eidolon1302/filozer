@@ -14,7 +14,7 @@ setup(
     description="A simple example CLI.",
     long_description=open('README.md').read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/your-username/my-example-cli",
+    url="https://github.com/eidolon1302/cli-mad",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

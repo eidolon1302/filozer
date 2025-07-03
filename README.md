@@ -5,7 +5,7 @@ This is a simple example CLI to demonstrate how to build and distribute a Python
 ## Installation
 
 ```bash
-pip install git+https://github.com/your-username/my-example-cli.git
+pip install git+https://github.com/eidolon1302/cli-mad.git
 ```
 
 ## Usage
