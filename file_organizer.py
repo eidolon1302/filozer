@@ -2,6 +2,7 @@ import argparse
 import os
 import shutil
 from datetime import datetime, timedelta
+import pyfiglet
 
 def organize_files(source_dir):
     print(f"Organizing files in: {source_dir}")
@@ -77,7 +78,7 @@ def clean_files(source_dir, days_old=30, dry_run=False):
 
 def main():
     parser = argparse.ArgumentParser(description="A CLI tool to organize and clean files.")
-    subparsers = parser.add_subparsers(dest="command", help="Available commands", required=True)
+    subparsers = parser.add_subparsers(dest="command", help="Available commands", required=False)
 
     # Organize command
     organize_parser = subparsers.add_parser("organize", help="Organize files into categorized subfolders.")
@@ -91,7 +92,13 @@ def main():
 
     args = parser.parse_args()
 
-    if args.command == "organize":
+    if args.command is None:
+        ascii_banner = pyfiglet.figlet_format("File Organizer")
+        print(ascii_banner)
+        parser.print_help()
+        import sys
+        sys.exit(1)
+    elif args.command == "organize":
         organize_files(os.path.abspath(args.directory))
     elif args.command == "clean":
         clean_files(os.path.abspath(args.directory), args.days_old, args.dry_run)
